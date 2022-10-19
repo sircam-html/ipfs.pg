@@ -27,7 +27,7 @@
       "src": "cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/brand/power_games-op.webp"
     },
     {
-      "src": "/favicon.ico",
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.jpg",
       "type": "image/x-icon"
     }
   ],
