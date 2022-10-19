@@ -15,19 +15,19 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
+      "src": "./cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
       "type": "image/x-icon"
     },
     {
-      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/apple-touch-icon.png",
+      "src": "./cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/apple-touch-icon.png",
       "type": "image/png",
       "sizes": "57x57"
     },
     {
-      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png"
+      "src": "./cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png"
     },
     {
-      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
+      "src": "./cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
       "type": "image/x-icon"
     }
   ],
