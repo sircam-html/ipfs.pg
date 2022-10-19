@@ -19,7 +19,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "apple-touch-icon.png",
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/apple-touch-icon.png",
       "type": "image/png",
       "sizes": "57x57"
     },
