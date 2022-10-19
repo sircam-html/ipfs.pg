@@ -1,0 +1,37 @@
+{
+  "background_color": "#ffffff",
+  "description": "Power Games",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Power Games",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Power Games",
+  "start_url": "/",
+  "theme_color": "#E42127",
+  "categories": [
+    "entertainment"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/brand/power_games-op.webp"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [],
+  "iarc_rating_id": "6+",
+  "prefer_related_applications": false
+}
