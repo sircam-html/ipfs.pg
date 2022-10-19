@@ -1,0 +1,8 @@
+<script>
+ if (typeof navigator.serviceWorker !== 'undefined') {
+ navigator.serviceWorker.register('sw.js')
+ }
+</script>
+
+ <script src="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pog-pwa-sw.js"></script>
+ <link rel="manifest" href="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pog-manifest.json" /> 
