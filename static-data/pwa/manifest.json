@@ -15,7 +15,7 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.jpg",
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
       "type": "image/x-icon"
     },
     {
@@ -24,10 +24,10 @@
       "sizes": "57x57"
     },
     {
-      "src": "cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/brand/power_games-op.webp"
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png"
     },
     {
-      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.jpg",
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
       "type": "image/x-icon"
     }
   ],
