@@ -1,0 +1,41 @@
+{
+  "background_color": "#ffffff",
+  "description": "Aplicación PWA del sitio web",
+  "dir": "ltr",
+  "display": "minimal-ui",
+  "name": "Power Games En Línea",
+  "orientation": "any",
+  "scope": "https://powergamesenlinea.com/",
+  "short_name": "Power Games",
+  "start_url": "https://powergamesenlinea.com/",
+  "theme_color": "#E42127",
+  "categories": [
+    "entertainment"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png"
+    },
+    {
+      "src": "//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pg-logotype.png",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [],
+  "iarc_rating_id": "6+",
+  "prefer_related_applications": false,
+  "lang": "es",
+  "display_override": [
+    "standalone"
+  ]
+}
