@@ -4,5 +4,6 @@
  }
 </script>
 
- <script src="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwrgms-pwabuilder-sw.js"></script>
- <link rel="manifest" href="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwrg-manifest.json" /> 
+ <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
+ <script src="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwrg-pwabuilder-sw.js"></script>
+ <link rel="manifest" href="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwrg-manifest.json" />
