@@ -4,5 +4,5 @@
  }
 </script>
 
- <script src="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwa-pog-sw.js"></script>
- <link rel="manifest" href="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pog-manifest.json" /> 
+ <script src="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwrgms-pwabuilder-sw.js"></script>
+ <link rel="manifest" href="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwrgms-manifest.json" /> 
