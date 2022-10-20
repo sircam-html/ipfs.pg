@@ -1,8 +1,8 @@
 {
   "background_color": "#ffffff",
   "description": "Aplicación PWA del sitio web",
-  "dir": "auto",
-  "display": "fullscreen",
+  "dir": "ltr",
+  "display": "minimal-ui",
   "name": "Power Games En Línea",
   "orientation": "any",
   "scope": "https://powergamesenlinea.com/",
