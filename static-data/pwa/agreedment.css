@@ -1,0 +1,478 @@
+@import "breakpoint"; 
+
+// Variables ======================
+
+// Master Properties
+$padding: 20px;
+$border: 1px solid #ddd;
+$border-radius: 3px;
+
+// Master Breakpoints
+$breakpoint--xs: min-width 360px;
+$breakpoint--sm: min-width 768px;
+$breakpoint--md: min-width 992px;
+$breakpoint--lg: min-width 1200px;
+
+// Colors
+$red   : #d9534f;
+$green : #5cb85c;
+$blue  : #0275d8;
+$darkest  : #141419;
+$lightest : #fff;
+$lighter  : #fafafa;
+$light    : #eee;
+
+// Icons
+$icon--check  : 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMSBCYXNpYy8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS1iYXNpYy5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBiYXNlUHJvZmlsZT0iYmFzaWMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzIwIDIyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2Rpc3BsYXk6bm9uZTt9LnN0MXtkaXNwbGF5OmlubGluZTt9LnN0MntmaWxsOiMxNTE1MUE7fS5zdDN7ZmlsbDojRkZGRkZGO30uc3Q0e2Rpc3BsYXk6aW5saW5lO2ZpbGw6IzAxMDEwMTt9LnN0NXtmaWxsOiM3MEMxNjk7fS5zdDZ7ZmlsbDojMzFBM0RDO308L3N0eWxlPjxnIGlkPSJCYWNrZ3JvdW5kIiBjbGFzcz0ic3QwIj48ZyBjbGFzcz0ic3QxIj48cmVjdCBpZD0iX3gzMV8iIHk9IjAiIGNsYXNzPSJzdDIiIHdpZHRoPSIzMjAiIGhlaWdodD0iMjI0Ii8+PC9nPjwvZz48ZyBpZD0iSnVkZF9GYXJyaXMiPjxnIGlkPSJMaWdodF9JY29ucyI+PHBhdGggaWQ9IkNoZWNrIiBjbGFzcz0ic3QzIiBkPSJNMjgyLjMsMzYuNGwtMTIuNi0xMi42Yy0yLjQtMi40LTYuMi0yLjQtOC42LDBMMTIyLjgsMTYyLjFMNTguOSw5OC40Yy0yLjQtMi40LTYuMi0yLjQtOC42LDBMMzcuNywxMTFjLTIuNCwyLjQtMi40LDYuMiwwLDguNmw4MSw4MC42YzIuNCwyLjQsNi4yLDIuNCw4LjYsMEwyODIuMyw0NUMyODQuNyw0Mi42LDI4NC43LDM4LjgsMjgyLjMsMzYuNHoiLz48L2c+PGcgaWQ9IkRhcmtfSWNvbnMiIGNsYXNzPSJzdDAiPjxwYXRoIGlkPSJDaGVja18xXyIgY2xhc3M9InN0MSIgZD0iTTI4Mi4zLDM2LjRsLTEyLjYtMTIuNmMtMi40LTIuNC02LjItMi40LTguNiwwTDEyMi44LDE2Mi4xTDU4LjksOTguNGMtMi40LTIuNC02LjItMi40LTguNiwwTDM3LjcsMTExYy0yLjQsMi40LTIuNCw2LjIsMCw4LjZsODEsODAuNmMyLjQsMi40LDYuMiwyLjQsOC42LDBMMjgyLjMsNDVDMjg0LjcsNDIuNiwyODQuNywzOC44LDI4Mi4zLDM2LjR6Ii8+PC9nPjwvZz48ZyBpZD0iQnJhbmRfTGFiZWxzIj48L2c+PGcgaWQ9Ik1hc3Rlcl9MYWJlbHMiPjwvZz48L3N2Zz4=';
+$icon--times : 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMSBCYXNpYy8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS1iYXNpYy5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBiYXNlUHJvZmlsZT0iYmFzaWMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzIwIDIyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2Rpc3BsYXk6bm9uZTt9LnN0MXtkaXNwbGF5OmlubGluZTt9LnN0MntmaWxsOiMxNTE1MUE7fS5zdDN7ZmlsbDojRkZGRkZGO30uc3Q0e2Rpc3BsYXk6aW5saW5lO2ZpbGw6IzAxMDEwMTt9LnN0NXtmaWxsOiM3MEMxNjk7fS5zdDZ7ZmlsbDojMzFBM0RDO308L3N0eWxlPjxnIGlkPSJCYWNrZ3JvdW5kIiBjbGFzcz0ic3QwIj48ZyBjbGFzcz0ic3QxIj48cmVjdCBpZD0iX3gzMV9fMV8iIHk9IjAiIGNsYXNzPSJzdDIiIHdpZHRoPSIzMjAiIGhlaWdodD0iMjI0Ii8+PC9nPjwvZz48ZyBpZD0iSnVkZF9GYXJyaXMiPjxnIGlkPSJMaWdodF9JY29ucyI+PHBhdGggaWQ9IlRpbWVzXzFfIiBjbGFzcz0ic3QzIiBkPSJNMTc3LDExMmw4MS42LTgxLjZjMS45LTEuOSwxLjktNSwwLTYuOWwtMTAuMS0xMC4xYy0xLjktMS45LTUtMS45LTYuOSwwTDE2MCw5NUw3OC40LDEzLjRjLTEuOS0xLjktNS0xLjktNi45LDBMNjEuNCwyMy41Yy0xLjksMS45LTEuOSw1LDAsNi45TDE0MywxMTJsLTgxLjYsODEuNmMtMS45LDEuOS0xLjksNSwwLDYuOWwxMC4xLDEwLjFjMS45LDEuOSw1LDEuOSw2LjksMEwxNjAsMTI5bDgxLjYsODEuNmMxLjksMS45LDUsMS45LDYuOSwwbDEwLjEtMTAuMWMxLjktMS45LDEuOS01LDAtNi44TDE3NywxMTJ6Ii8+PC9nPjxnIGlkPSJEYXJrX0ljb25zIiBjbGFzcz0ic3QwIj48cGF0aCBpZD0iVGltZXMiIGNsYXNzPSJzdDEiIGQ9Ik0xNzcsMTEybDgxLjYtODEuNmMxLjktMS45LDEuOS01LDAtNi45bC0xMC4xLTEwLjFjLTEuOS0xLjktNS0xLjktNi45LDBMMTYwLDk1TDc4LjQsMTMuNGMtMS45LTEuOS01LTEuOS02LjksMEw2MS40LDIzLjVjLTEuOSwxLjktMS45LDUsMCw2LjlMMTQzLDExMmwtODEuNiw4MS42Yy0xLjksMS45LTEuOSw1LDAsNi45bDEwLjEsMTAuMWMxLjksMS45LDUsMS45LDYuOSwwTDE2MCwxMjlsODEuNiw4MS42YzEuOSwxLjksNSwxLjksNi45LDBsMTAuMS0xMC4xYzEuOS0xLjksMS45LTUsMC02LjhMMTc3LDExMnoiLz48L2c+PC9nPjxnIGlkPSJCcmFuZF9MYWJlbHMiPjwvZz48ZyBpZD0iTWFzdGVyX0xhYmVscyI+PC9nPjwvc3ZnPg==';
+
+// Extends
+%uncollapse {
+
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+
+}
+
+// Breakpoint
+.breakpoint {
+
+  @include breakpoint($breakpoint--xs) {
+
+  }
+
+  @include breakpoint($breakpoint--sm) {
+
+  }
+
+  @include breakpoint($breakpoint--md) {
+
+  }
+
+  @include breakpoint($breakpoint--lg) {
+
+  }
+
+}
+
+
+// Demo  ==========================
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: $blue;
+}
+
+.overlay--open {
+  z-index: 800;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 35px;
+  width: 180px;
+  margin: auto;
+}
+
+.alert {
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 12px;
+}
+
+.alert-info {
+  background: lighten($blue, 50%);
+  border-color: lighten($blue, 40%);
+  color: $blue;
+}
+
+// Overlay  =======================
+
+.overlay {
+
+  & {
+    z-index: 900;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  @include breakpoint($breakpoint--xs) {
+    padding: 25px 0 55px;
+    background: $lightest;
+  }
+
+  @include breakpoint($breakpoint--sm) {
+    padding: 70px 0 80px;
+    background: $light;
+  }
+
+}
+
+
+// Titling  =======================
+
+.title {
+
+  & {
+    margin: 0 0 12px 0;
+    font-weight: 400;
+    text-align: center;
+    color: $darkest;
+  }
+
+  @include breakpoint($breakpoint--xs) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($breakpoint--sm) {
+    font-size: 28px;
+  }
+
+}
+
+.subtitle {
+
+  & {
+    font-weight: 300;
+    text-align: center;
+    color: #777;
+  }
+
+  @include breakpoint($breakpoint--xs) {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @include breakpoint($breakpoint--sm) {
+    margin: 0 0 25px 0;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+}
+
+
+// Legal  ========================
+
+.legal {
+
+  & {
+
+    background: #fff;
+    border-radius: $border-radius;
+
+    @include breakpoint($breakpoint--xs) {
+      margin: 0 0 60px 0;
+      border: none;
+    }
+
+    @include breakpoint($breakpoint--sm) {
+      margin: 0 0 80px 0;
+      border: 1px solid #ddd;
+    }
+
+    sup {
+      color: $red;
+    }
+
+  }
+
+  &__instructions {
+	  
+    @include breakpoint($breakpoint--xs) {
+      padding: 20px 0 0;
+    }
+
+    @include breakpoint($breakpoint--sm) {
+      padding: 20px 20px 0;
+    }
+
+    alert  {
+      margin: 0;
+    }
+
+  }
+
+  &__navigation {
+
+    & {
+      position: relative;
+      padding: 15px 20px 20px;
+      font-size: 12px;
+      line-height: 20px;
+      border: $border;
+      background: $lightest;
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+
+    @include breakpoint($breakpoint--xs) {
+      margin: 0;
+    }
+
+    @include breakpoint($breakpoint--sm) {
+      margin: 20px;
+    }
+
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style-position: inside;
+      list-style-type: lower-roman;
+      color: $blue;
+    }
+
+  }
+
+  &__terms {
+
+    & {
+      position: relative;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      border: $border;
+      border-radius: $border-radius;
+      cursor: s-resize;
+    }
+
+    @include breakpoint($breakpoint--xs) {
+      height: 180px;
+      margin: 20px 0;
+    }
+
+    @include breakpoint($breakpoint--sm) {
+      height: 280px;
+      margin: 20px;
+    }
+
+    strong, p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+  }
+
+  &__terms-scroll {
+    padding: 20px;
+  }
+
+  &__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #ddd;
+  }
+
+  &__rule {
+
+    & {
+      font-size: 12px;
+    }
+
+    @include breakpoint($breakpoint--xs) {
+      padding: 15px 0;
+      border: none;
+    }
+
+    @include breakpoint($breakpoint--sm) {
+      padding: 15px 20px;
+      border-top: $border;
+    }
+
+    &:last-child {
+
+      margin: 0 0 20px 0;
+      border-bottom: $border;
+
+      @include breakpoint($breakpoint--xs) {
+        border: none;
+      }
+
+      @include breakpoint($breakpoint--sm) {
+        border-top: $border;
+        border-bottom: $border;
+      }
+
+
+
+    }
+
+  }
+
+  &__actions {
+    @extend %uncollapse;
+    padding: 0px 20px 20px;
+    font-size: 12px;
+  }
+
+}
+
+#terms-and-conditions,
+#privacy-notice {
+  padding-top: 20px;
+  margin: -20px 0 20px 0;
+}
+
+
+// Legal Toggler  ================
+
+$toggle--static-color  : $blue;
+$toggle--success-color : $green;
+$toggle--fail-color    : $red;
+
+.toggle--checkbox,
+.toggle--buttons {
+
+  & {
+    position: relative;
+  }
+
+  input {
+    z-index: -1;
+    position: absolute;
+    opacity: 0
+  }
+
+  .toggle__agree,
+  .toggle__disagree {
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 0;
+  }
+
+}
+
+.toggle--checkbox {
+
+  & {
+    padding: 0 0 0 30px;
+  }
+
+  .toggle__agree input:checked ~ .control-indicator,
+  .toggle__agree:hover .control-indicator {
+    background-image: url($icon--check);
+    transition: all 0.15s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 45%;
+  }
+
+  .toggle__agree input:checked ~ .control-indicator {
+    background-color: $toggle--success-color;
+    border-color: $toggle--success-color;
+  }
+
+  .toggle__agree:hover .control-indicator {
+    background-color: lighten($toggle--static-color, 35%);
+    border-color: lighten($toggle--static-color, 30%);
+  }
+
+  .control-indicator {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    -moz-user-select: none;
+    border: 1px solid lighten($toggle--static-color, 35%);;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 52%;
+    transition: all 0.1s;
+  }
+
+}
+
+.toggle--buttons {
+
+  & {
+    padding: 0 0 8px;
+  }
+
+  .toggle__label {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0 0 14px 0;
+  }
+
+  .toggle__button {
+    
+    margin: 0 3px 0 0;
+    padding: 5px 12px;
+    color: lighten($toggle--static-color, 20%);
+    background-color: #fff;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 30px 35%;
+    transition: all 0.15s;
+    border-radius: 4px;
+    border: 1px solid lighten($toggle--static-color, 30%);
+    -moz-user-select: none;
+    
+    &:hover {
+      color: #fff;
+      background-color: lighten($toggle--static-color, 35%);
+      transition: all 0.15s;
+    }
+    
+  }
+
+  input:checked ~ .toggle__button {
+    background-image: url($icon--check);
+    background-color: $toggle--success-color;
+    border: 1px solid $toggle--success-color;
+    color: #fff;
+    padding-right: 30px;
+  }
+
+}
+
+.legal__rule.is-required {
+
+  .toggle--buttons {
+
+    .toggle__agree input:checked ~ .toggle__button,
+    .toggle__disagree input:checked ~ .toggle__button {
+      color: #fff;
+      padding-right: 30px;
+    }
+
+    .toggle__agree input:checked ~ .toggle__button {
+      background-image: url($icon--check);
+      background-color: $toggle--success-color;
+      border: 1px solid $toggle--success-color;
+    }
+
+    .toggle__disagree input:checked ~ .toggle__button {
+      background-image: url($icon--times);
+      background-color: $toggle--fail-color ;
+      border: 1px solid $toggle--fail-color ;
+    }
+
+  }
+
+}
+
+
