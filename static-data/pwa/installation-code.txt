@@ -4,5 +4,5 @@
  }
 </script>
 
- <script src="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pw-repdom-pwabuilder-sw.js"></script> 
+ <script src="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pwg-repdom-pwabuilder-sw.js"></script> 
  <link rel="manifest" href="//cdn.jsdelivr.net/gh/sircam-html/ipfs.pg@main/static-data/pwa/pw-repdom-manifest.json" crossorigin="use-credentials" />
