@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "com.powergamesenlinea.twa",
+                     "sha256_cert_fingerprints": ["EF:11:41:12:E0:92:5C:86:58:36:81:6B:7A:80:28:B9:01:DA:29:63:8D:DB:E2:AE:E4:62:A1:66:9B:16:8C:A2"] }
+      }
+]
