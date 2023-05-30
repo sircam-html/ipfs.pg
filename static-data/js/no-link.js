@@ -1,0 +1,1 @@
+$(document).ready(function(){setTimeout(function(){$("a[href]#no-link").each(function(){var n=this.href;$(this).removeAttr("href").css("cursor","pointer").click(function(){n.toLowerCase().indexOf("#")>=0||window.open(n,"_blank")})})},500)});
