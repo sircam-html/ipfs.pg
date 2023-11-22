@@ -1,0 +1,125 @@
+/* WRAP-COLLAPSIBLE SCHEME */
+ 
+.wrap-collapsible {
+ margin-bottom: 1.2rem 0;
+ }
+ 
+ input[type='checkbox'] {
+ display: none;
+ }
+ 
+ .lbl-toggle {
+ display: block;
+ 
+ font-weight: bold;
+ font-family: monospace;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ text-align: center;
+ 
+ padding: 1rem;
+ 
+ color: #FFFFFF;
+ background: rgb(0,0,0);
+ background: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(218,56,29,1) 48%, rgba(0,0,0,1) 79%);
+ 
+ cursor: pointer;
+ 
+ border-radius: 7px;
+ transition: all 0.25s ease-out;
+ }
+ 
+ .lbl-toggle:hover {
+ color: #1D009A;
+ }
+ 
+ .lbl-toggle::before {
+ content: ' ';
+ display: inline-block;
+ 
+ border-top: 5px solid transparent;
+ border-bottom: 5px solid transparent;
+ border-left: 5px solid currentColor;
+ vertical-align: middle;
+ margin-right: .7rem;
+ transform: translateY(-2px);
+ 
+ transition: transform .2s ease-out;
+ }
+ 
+ .toggle:checked + .lbl-toggle::before {
+ transform: rotate(90deg) translateX(-3px);
+ }
+ 
+ .collapsible-content {
+ max-height: 0px;
+ overflow: hidden;
+ transition: max-height .25s ease-in-out;
+ }
+ 
+ .toggle:checked + .lbl-toggle + .collapsible-content {
+ max-height: 100vh;
+ }
+ 
+ .toggle:checked + .lbl-toggle {
+ border-bottom-right-radius: 0;
+ border-bottom-left-radius: 0;
+ }
+ 
+ .collapsible-content .content-inner {
+ display: flex;
+ align-items: center;
+ background: rgba(0, 0, 0);
+ border-bottom: 1px solid rgba(250, 224, 66, .45);
+ border-bottom-left-radius: 7px;
+ border-bottom-right-radius: 7px;
+ padding: .5rem 1rem;
+ }
+ 
+ 
+ /* WRAP-COLLAPSIBLE IMAGE SCHEME */
+ 
+ * {
+ box-sizing: border-box;
+ }
+ 
+ .left {
+ float: left;
+ flex-wrap: wrap;
+ width: 50%;
+ padding: 1px;
+ }
+
+ .right {
+ align-items: center;
+ float: left;
+ flex-wrap: wrap;
+ width: 50%;
+ padding: 1px;
+ }
+
+ /* WRAP-COLLAPSIBLE INNER CONTENT */
+
+@media only screen and (max-width: 100%) {
+.content-inner {
+ display: flex;
+ flex-direction: column;
+ background: rgba(0, 0, 0);
+ border-bottom: 1px solid rgba(250, 224, 66, .45);
+ border-bottom-left-radius: 7px;
+ border-bottom-right-radius: 7px;
+ padding: .5rem 1rem;
+ }
+
+.left {
+ float: left;
+ width: 100%;
+ padding: 1px;
+ }
+ 
+.right {
+ float: left;
+ width: 100%;
+ padding: 1px;
+ } 
+}
