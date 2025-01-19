@@ -1,0 +1,68 @@
+Important commands for Arch Linux
+
+
+update system
+# pacman -Syu
+
+list installed packages
+# pacman -Q
+
+shows AUR installed locally
+# pacman -Qm
+
+lists packages explicitely installed
+# pacman -Qqe   
+
+list packages no longer required by others
+# pacman -Qdtq
+
+search installed packages
+# pacman -Qs <name>
+
+search packages
+# pacman -Ss <name>
+
+install packages
+# pacman -S <name>
+
+remove package, its dependencies and config file backups
+# pacman -Rns <name>
+
+clean old packages in cache
+# pacman -Sc
+
+
+System maintenance
+=======
+
+unit files: /usr/lib/systemd/system/ or /etc/systemd/system/
+
+list running units
+$ systemctl
+
+check status
+$ systemctl status 
+
+List failed units
+$ systemctl --failed
+
+Shut down and reboot the system
+$ systemctl reboot
+
+Shut down and power-off the system
+$ systemctl poweroff
+
+Perform a reboot of the userspace-only with a #Soft reboot
+$ systemctl soft-reboot
+
+
+yay - Yet Another Yogurt 
+==============================
+
+Clean unneeded dependencies
+yay -Yc
+
+Complete information
+$ yay -Ps
+
+=================
