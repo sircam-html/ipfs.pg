@@ -9,5 +9,5 @@ This website is an online store dedicated to selling physical video game console
 
 All products offered are legitimate physical items intended for sale and purchase. We respect all intellectual property rights and comply with copyright laws. Any trademarks or brand names used on this site are the property of their respective owners and are used solely for identification and promotional purposes.
 
-If you have any questions or concerns regarding our products or content, please contact us directly.
+If you have any questions or concerns regarding our products or content, please [contact us](https://webx-dev.netlify.app/) directly. 
 ##
