@@ -5,7 +5,10 @@
 
 ## Disclaimer
 
-This website is an online store dedicated to selling physical video game consoles and games from authorized brands such as Nintendo, Microsoft, and Sony. We do not distribute, host, or provide any unauthorized digital copies, game files, ROMs, or software.
+
+This website is an online store dedicated to selling physical products including video game consoles and games from authorized brands such as Nintendo, Microsoft, and Sony, as well as gift cards, Pokémon cards, Funko Pop collectibles, and gaming accessories from SteelSeries, Redragon, and Razer.
+
+We do not distribute, host, or provide any unauthorized digital copies, game files, ROMs, or software.
 
 All products offered are legitimate physical items intended for sale and purchase. We respect all intellectual property rights and comply with copyright laws. Any trademarks or brand names used on this site are the property of their respective owners and are used solely for identification and promotional purposes.
 
